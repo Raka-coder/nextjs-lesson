@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+coverage
+*.prettierrc
+*config.mjs
+*config.ts
+*.d.ts
+*.json
