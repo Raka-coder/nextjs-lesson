@@ -3,9 +3,11 @@ import Link from "next/link";
 export default async function ProductDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: any[] };
 }) {
-  const res = await fetch(`https://fakestoreapi.com/products/${params.slug}`);
+  const res = await fetch(`https://fakestoreapi.com/products/${params.slug}`, {
+    next: { tags: ["products"] },
+  });
   const product = await res.json();
 
   return (

@@ -3,15 +3,17 @@ import React from 'react'
 
 function DashboardPage() {
   return (
-    <div>
-        <div className="container mx-auto p-4">
-            <h1 className="text-4xl font-bold">Dashboard Settings</h1>
-            <p>Manage your dashboard settings here.</p>
-            <Link href="/product" className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">
-                Go to Product Page
-            </Link>
-        </div>
-    </div>
+    <div className='flex flex-col p-4 bg-gray-100 min-h-screen'>
+      <header className="flex flex-col mb-4">
+        <h1 className="text-2xl font-bold">Halaman Dashboard</h1>
+        <p>Selamat datang di dasbor Anda!</p>
+      </header>
+      {/* <div className="p-4 bg-gray-400 rounded-lg"> */}
+        <Link href="/product" className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">
+          Pergi ke Halaman Produk
+        </Link>
+      </div>
+    // </div>
   )
 }
 

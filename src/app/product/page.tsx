@@ -2,7 +2,12 @@ import Link from 'next/link'
 import React, { Suspense } from 'react'
 
 export default async function ProductPage() {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch("https://fakestoreapi.com/products", {
+    next: {
+      revalidate: 60, // Revalidate every 60 seconds
+    },
+  });
+
   const data = await res.json();
   console.log(data);
 
