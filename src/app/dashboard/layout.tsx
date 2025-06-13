@@ -3,11 +3,11 @@
 export default function DashboardLayout({
   children,
   analytics,
-  setting,
+  report,
 }: {
   children: React.ReactNode;
   analytics: React.ReactNode;
-  setting: React.ReactNode;
+  report: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col">
@@ -17,7 +17,7 @@ export default function DashboardLayout({
       <div className="grid grid-cols-3 gap-4">
         <div>{children}</div> {/* Halaman utama */}
         <div>{analytics}</div> {/* Halaman analytics */}
-        <div>{setting}</div> {/* Halaman setting */}
+        <div>{report}</div> {/* Halaman report */}
       </div>
     </div>
   );

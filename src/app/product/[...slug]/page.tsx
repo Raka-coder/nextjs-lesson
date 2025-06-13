@@ -11,7 +11,7 @@ export default async function ProductDetailPage({
   const product = await res.json();
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <Link
         href="/product"
         className="text-blue-500 hover:underline mb-4 inline-block"
@@ -19,14 +19,14 @@ export default async function ProductDetailPage({
         Back to Products
       </Link>
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-4xl font-bold">{product.title}</h2>
+        <h2 className="text-3xl font-bold">{product.title}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-80 object-cover rounded shadow"
+          className="w-full h-64 object-cover rounded shadow"
         />
 
         <div className="flex flex-col gap-4">
@@ -47,3 +47,4 @@ export default async function ProductDetailPage({
     </div>
   );
 }
+
